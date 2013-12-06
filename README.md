@@ -2,8 +2,10 @@
 
 [![Build Status](https://secure.travis-ci.org/RobLoach/docpad-plugin-cssmin.png?branch=master)](http://travis-ci.org/RobLoach/docpad-plugin-cssmin "Check this project's build status on TravisCI")
 [![NPM version](https://badge.fury.io/js/docpad-plugin-cssmin.png)](http://badge.fury.io/js/docpad-plugin-cssmin "View this project on NPM")
+[![Gittip button](http://img.shields.io/gittip/RobLoach.png)](https://www.gittip.com/RobLoach/ "Support this project using Gittip")
+[![Flattr button](http://img.shields.io/flattr/donate.png?color=yellow)](http://flattr.com/thing/2257574/RobLoach "Support this project using Flattr")
 
-Allows minifying CSS, using [clean-css](http://github.com/GoalSmashers/clean-css),
+Allows minification of CSS, using [clean-css](http://github.com/GoalSmashers/clean-css),
 from within [DocPad](https://docpad.org).
 
 Convention:  `.css.cssmin.anything`
@@ -69,11 +71,11 @@ cssmin:
 
 
 ## History
-[You can discover the history inside the `History.md` file](https://github.com/robloach/docpad-plugin-htmlmin/blob/master/History.md#files)
+[You can discover the history inside the `History.md` file](https://github.com/robloach/docpad-plugin-cssmin/blob/master/HISTORY.md#files)
 
 
 ## Contributing
-[You can discover the contributing instructions inside the `Contributing.md` file](https://github.com/robloach/docpad-plugin-htmlmin/blob/master/Contributing.md#files)
+[You can discover the contributing instructions inside the `Contributing.md` file](https://github.com/robloach/docpad-plugin-cssmin/blob/master/CONTRIBUTING.md#files)
 
 
 ## License
