@@ -25,29 +25,46 @@ following [clean-css options](https://github.com/GoalSmashers/clean-css#how-to-u
 to your [DocPad configuration file](http://docpad.org/docs/config):
 
 ``` coffee
-  plugins:
-    cssmin:
-      # * for keeping all (default), 1 for keeping first one only, 0 for
-      # removing all
-      keepSpecialComments: '*'
+plugins:
+  cssmin:
+    # * for keeping all (default), 1 for keeping first one only, 0 for
+    # removing all
+    keepSpecialComments: '*'
 
-      # Whether to keep line breaks (default is false).
-      keepBreaks: false
+    # Whether to keep line breaks (default is false).
+    keepBreaks: false
 
-      # Turns on benchmarking mode measuring time spent on cleaning up.
-      benchmark: false
+    # Turns on benchmarking mode measuring time spent on cleaning up.
+    benchmark: false
 
-      # Whether to process @import rules.
-      processImport: false
+    # Whether to process @import rules.
+    processImport: false
 
-      # Whether to skip URLs rebasing.
-      noRebase: false
+    # Whether to skip URLs rebasing.
+    noRebase: false
 
-      # set to true to disable advanced optimizations.
-      noAdvanced: false
+    # set to true to disable advanced optimizations.
+    noAdvanced: false
 
-      # Enables debug mode.
-      debug: false
+    # Enables debug mode.
+    debug: false
+```
+
+
+### Template Configuration
+
+It is possible to override the default configuration on a per-template basis:
+
+``` css
+---
+cssmin:
+  processImport: true
+---
+
+/**
+ * The style.css file will be imported directly into this document.
+ */
+@import 'style.css';
 ```
 
 

@@ -12,8 +12,8 @@ module.exports = (BasePlugin) ->
       benchmark: false
       processImport: false
       noRebase: false
-      noAdvanced: false
-      debug: true
+      noAdvanced: true
+      debug: false
 
     # Constructor
     constructor: ->

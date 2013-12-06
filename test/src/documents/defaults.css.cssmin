@@ -16,4 +16,4 @@ h1 {
 /**
  * This import should stay as just a @import.
  */
-@import "import-contents.css"
+@import "no-cssmin.css";
