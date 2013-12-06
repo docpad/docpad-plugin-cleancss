@@ -1,0 +1,7 @@
+templateData:
+  site:
+    title: 'CSS Minifier Plugin for DocPad'
+plugins:
+  cssmin:
+    keepSpecialComments: 1
+    debug: true

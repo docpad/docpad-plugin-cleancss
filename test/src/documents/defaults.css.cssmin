@@ -1,0 +1,19 @@
+/*!
+ * This special comment is kept in the CSS due to docpad.cson.
+ */
+
+/*!
+ * This special comment second line is removed.
+ */
+
+/**
+ * This comment is removed.
+ */
+h1 {
+  color: red;
+}
+
+/**
+ * This import should stay as just a @import.
+ */
+@import "import-contents.css"

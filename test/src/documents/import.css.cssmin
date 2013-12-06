@@ -1,0 +1,16 @@
+---
+cssmin:
+  processImport: true
+---
+
+/**
+ * This @import is brought into the actual document.
+ */
+@import "import-contents.css";
+
+/**
+ * Standard CSS to see where the document is.
+ */
+h2 {
+  color: yellow;
+}
