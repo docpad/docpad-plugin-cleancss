@@ -5,10 +5,10 @@
 [![Gittip button](http://img.shields.io/gittip/RobLoach.png)](https://www.gittip.com/RobLoach/ "Support this project using Gittip")
 [![Flattr button](http://img.shields.io/flattr/donate.png?color=yellow)](http://flattr.com/thing/2257574/RobLoach "Support this project using Flattr")
 
-Allows minification of CSS, using [clean-css](http://github.com/GoalSmashers/clean-css),
-from within [DocPad](https://docpad.org).
+Allows minification of CSS from within [DocPad](https://docpad.org), using
+[clean-css](http://github.com/GoalSmashers/clean-css).
 
-Convention:  `.css.cssmin.anything`
+Convention:  `.css.anything`
 
 
 ## Install
@@ -55,7 +55,8 @@ plugins:
 
 ### Template Configuration
 
-It is possible to override the default configuration on a per-template basis:
+It is possible to override the default configuration on a per-template basis. In
+this example, we are acting on `src/documents/style.css`:
 
 ``` css
 ---
@@ -64,9 +65,9 @@ cssmin:
 ---
 
 /**
- * The style.css file will be imported directly into this document.
+ * The import.css file will be imported directly into this document.
  */
-@import 'style.css';
+@import 'import.css';
 ```
 
 

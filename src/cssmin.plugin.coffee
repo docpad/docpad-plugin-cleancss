@@ -26,26 +26,31 @@ module.exports = (BasePlugin) ->
       # Chain
       @
 
-    render: (opts,next) ->
+    renderDocument: (opts,next) ->
       # Prepare.
-      {inExtension,outExtension,templateData, file} = opts
+      {extension, templateData, file, content} = opts
 
-      # Ensure we are minifying the CSS.
-      if inExtension in ['cssmin'] and outExtension in ['css', null]
+      # Ensure we are acting on a Stylesheet document.
+      if extension == 'css' and file.type == 'document'
         # Prepare
         config = @getConfig()
+        cssminOptions = {}
+
+        # Allow use of global config options.
+        for own key, value of config
+          cssminOptions[key] = value
 
         # Allow overriding using the document options
         if templateData.document.cssmin or false
           for own key, value of templateData.document.cssmin
-            config[key] = value
+            cssminOptions[key] = value
 
         # Add in any more needed CleanCSS options.
-        config.relativeTo = file.attributes.fullDirPath
+        cssminOptions.relativeTo = file.attributes.fullDirPath
 
         # Render
         try
-          opts.content = new @CleanCSS(config).minify(opts.content)
+          opts.content = new @CleanCSS(cssminOptions).minify(opts.content)
         catch err
           return next(err)
 

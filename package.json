@@ -1,6 +1,7 @@
 {
   "name": "docpad-plugin-cssmin",
-  "version": "2.0.1",
+  "title": "CSS-Minifier Plugin for DocPad",
+  "version": "2.1.0",
   "description": "Adds support to minify CSS in DocPad.",
   "license": "MIT",
   "homepage": "http://github.com/robloach/docpad-plugin-cssmin",

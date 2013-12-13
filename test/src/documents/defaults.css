@@ -1,4 +1,6 @@
 /*!
+ * defaults.css
+ *
  * This special comment is kept in the CSS due to docpad.cson.
  */
 
@@ -16,4 +18,4 @@ h1 {
 /**
  * This import should stay as just a @import.
  */
-@import "no-cssmin.css";
+@import "processImport.css";

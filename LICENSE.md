@@ -1,3 +1,5 @@
+<!-- LICENSEFILE -->
+
 LICENSE
 =======
 

@@ -3,6 +3,10 @@ cssmin:
   processImport: true
 ---
 
+/*!
+ * processImport.css
+ */
+
 /**
  * Standard CSS to see where the document is.
  */
@@ -13,4 +17,4 @@ h2 {
 /**
  * This import is brought into the actual document.
  */
-@import "no-cssmin.css";
+@import "processImport-import.css";
