@@ -15,7 +15,7 @@ module.exports = (BasePlugin) ->
       noAdvanced: true
       debug: false
 
-      # Disabled on development environments.
+      # Disabled on development environments by default.
       environments:
         development:
           enabled: false
