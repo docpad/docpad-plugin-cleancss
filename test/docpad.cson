@@ -5,3 +5,8 @@ plugins:
   cssmin:
     keepSpecialComments: 1
     debug: true
+
+    # Enable on the development environment, since we're testing it.
+    environments:
+      development:
+        enabled: true

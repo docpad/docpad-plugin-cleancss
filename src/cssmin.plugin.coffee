@@ -15,6 +15,11 @@ module.exports = (BasePlugin) ->
       noAdvanced: true
       debug: false
 
+      # Disabled on development environments.
+      environments:
+        development:
+          enabled: false
+
     # Constructor
     constructor: ->
       # Prepare
