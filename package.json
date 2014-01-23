@@ -1,9 +1,11 @@
 {
   "name": "docpad-plugin-cssmin",
   "title": "CSS-Minifier Plugin for DocPad",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Adds support to minify CSS in DocPad.",
-  "license": "MIT",
+  "license": {
+    "type": "MIT"
+  },
   "homepage": "http://github.com/robloach/docpad-plugin-cssmin",
   "keywords": [
     "docpad",
@@ -14,14 +16,16 @@
     "travis": true,
     "npm": true,
     "gittip": "RobLoach",
-    "flattr": "2257574/RobLoach"
+    "flattr": "2257574/RobLoach",
+    "david": true,
+    "daviddev": false
   },
-  "author": "Rob Loach (http://robloach.net)",
+  "author": "Rob Loach (http://github.com/RobLoach)",
   "maintainers": [
-    "Rob Loach (http://robloach.net)"
+    "Rob Loach (http://github.com/RobLoach)"
   ],
   "bugs": {
-    "url": "http://github.com/robloach/docpad-plugin-cssmin/issues"
+    "url": "http://github.com/RobLoach/docpad-plugin-cssmin/issues"
   },
   "repository": {
     "type": "git",
@@ -48,5 +52,8 @@
   },
   "peerDependencies": {
     "docpad": "6"
-  }
+  },
+  "contributors": [
+    "RobLoach (https://github.com/RobLoach)"
+  ]
 }

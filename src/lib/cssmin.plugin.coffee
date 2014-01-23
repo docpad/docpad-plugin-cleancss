@@ -36,7 +36,7 @@ module.exports = (BasePlugin) ->
       {extension, templateData, file, content} = opts
 
       # Ensure we are acting on a Stylesheet document.
-      if extension == 'css' and file.type == 'document'
+      if extension is 'css' and file.type is 'document'
         # Prepare
         config = @getConfig()
         cssminOptions = {}

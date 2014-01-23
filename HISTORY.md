@@ -1,5 +1,8 @@
 # History
 
+- v2.1.2 January 23rd, 2014
+  - Documentation update
+
 - v2.1.1 December 23rd, 2013
   - Disabled on development environments by default
 
