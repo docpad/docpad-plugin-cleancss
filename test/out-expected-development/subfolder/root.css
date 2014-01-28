@@ -1,0 +1,4 @@
+/**
+ * This file tests root imports.
+ */
+@import '/special-comment.css';

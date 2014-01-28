@@ -123,7 +123,7 @@ No sponsors yet! Will you be the first?
 
 These amazing people have contributed code to this project:
 
-- [Rob Loach](http://github.com/RobLoach) — [view contributions](https://github.com/docpad/docpad-plugin-cleancss/commits?author=RobLoach)
+- [Rob Loach](http://github.com/RobLoach) <robloach@gmail.com> — [view contributions](https://github.com/docpad/docpad-plugin-cleancss/commits?author=RobLoach)
 
 [Become a contributor!](https://github.com/docpad/docpad-plugin-cleancss/blob/master/CONTRIBUTING.md#files)
 

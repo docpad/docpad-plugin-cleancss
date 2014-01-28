@@ -1,0 +1,6 @@
+/**
+ * This file tests relative URL imports.
+ */
+body {
+	background-image: url('./blah.jpg');
+}

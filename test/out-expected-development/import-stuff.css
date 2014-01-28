@@ -9,3 +9,8 @@ h2 {
  * This import is brought into the actual document.
  */
 @import "special-comment.css";
+
+/**
+ * MAke sure urls are fixed up when imported
+ */
+@import "./subfolder/url.css";

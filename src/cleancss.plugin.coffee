@@ -29,21 +29,27 @@ module.exports = (BasePlugin) ->
 
 			# Prepare
 			plugin = @
+			config = @getConfig()
+			docpad = @docpad
+			docpadConfig = docpad.getConfig()
 
 			# Create the task group to handle multiple Browserify files.
 			tasks = new TaskGroup({concurrency:0, next})
 
 			# Create a new task for each Browserify files.
 			opts.collection.findAll({cleancss: $exists: true}).each (file) ->
-				cleanOpts = file.get('cleancss')
-				return  if cleanOpts is false  # Skip the file when the option is explicitly false
+				# Skip the file when the option is explicitly false
+				return  if file.get('cleancss') is false
+
 				tasks.addTask (complete) ->
 					# Extract opts
+					cleanOpts = file.get('cleancss')
 					cleanOpts = {}  if cleanOpts is true
 					cleanOpts.relativeTo = file.get('outDirPath')
+					cleanOpts.root = docpadConfig.outPath
 
 					# Provide the default configuration options if needed.
-					for own key, value of plugin.getConfig().cleancssOpts
+					for own key, value of config.cleancssOpts
 						cleanOpts[key] ?= value
 
 					try
