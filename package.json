@@ -1,59 +1,61 @@
 {
-  "name": "docpad-plugin-cssmin",
-  "title": "CSS-Minifier Plugin for DocPad",
-  "version": "2.1.2",
-  "description": "Adds support to minify CSS in DocPad.",
+  "name": "docpad-plugin-cleancss",
+  "version": "2.0.0",
+  "description": "Adds support to clean CSS in DocPad.",
+  "homepage": "http://github.com/docpad/docpad-plugin-cleancss",
   "license": {
     "type": "MIT"
   },
-  "homepage": "http://github.com/robloach/docpad-plugin-cssmin",
+  "badges": {
+    "travis": true,
+    "npm": true,
+    "david": true,
+    "daviddev": true,
+    "gittip": "bevry",
+    "flattr": "344188/balupton-on-Flattr",
+    "paypal": "QB8GQPZAH84N6",
+    "bitcoin": "https://coinbase.com/checkouts/9ef59f5479eec1d97d63382c9ebcb93a"
+  },
   "keywords": [
     "docpad",
     "docpad-plugin",
     "clean-css"
   ],
-  "badges": {
-    "travis": true,
-    "npm": true,
-    "gittip": "RobLoach",
-    "flattr": "2257574/RobLoach",
-    "david": true,
-    "daviddev": false
-  },
-  "author": "Rob Loach (http://github.com/RobLoach)",
+  "author": "2013+ Rob Loach <robloach@gmail.com> (http://github.com/RobLoach)",
   "maintainers": [
-    "Rob Loach (http://github.com/RobLoach)"
+    "Rob Loach <robloach@gmail.com> (http://github.com/RobLoach)"
   ],
   "bugs": {
-    "url": "http://github.com/RobLoach/docpad-plugin-cssmin/issues"
+    "url": "http://github.com/docpad/docpad-plugin-cleancss/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/RobLoach/docpad-plugin-cssmin.git"
+    "url": "https://github.com/docpad/docpad-plugin-cleancss.git"
   },
   "engines": {
-    "node": ">=0.4",
-    "docpad": "6.x"
-  },
-  "dependencies": {
-    "clean-css": "~2.0.2"
-  },
-  "devDependencies": {
-    "coffee-script": "~1.6.2",
-    "joe": "~1.3.2",
-    "docpad": ">=6.37 <7"
-  },
-  "main": "./out/lib/cssmin.plugin.js",
-  "scripts": {
-    "test": "node ./out/test/cssmin.test.js"
-  },
-  "directories": {
-    "lib": "./out/lib"
+    "node": ">=0.4"
   },
   "peerDependencies": {
     "docpad": "6"
   },
+  "dependencies": {
+    "clean-css": "~2.0.2",
+    "taskgroup": "~3.3.6"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.2",
+    "joe": "~1.3.2",
+    "docpad": ">=6.37 <7",
+    "projectz": "~0.3.9"
+  },
+  "main": "./out/cleancss.plugin.js",
+  "scripts": {
+    "test": "node ./out/cleancss.test.js"
+  },
+  "directories": {
+    "lib": "./out"
+  },
   "contributors": [
-    "RobLoach (https://github.com/RobLoach)"
+    "Rob Loach (http://github.com/RobLoach)"
   ]
 }

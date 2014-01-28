@@ -10,4 +10,6 @@ node_js:
 notifications:
   irc:
     - "irc.freenode.org#bevry-dev"
-  email: false
+  email:
+    recipients:
+      - travisci@bevry.me

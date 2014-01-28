@@ -1,20 +1,11 @@
----
-cssmin:
-  processImport: true
----
-
-/*!
- * processImport.css
- */
-
 /**
  * Standard CSS to see where the document is.
  */
 h2 {
-  color: yellow;
+	color: yellow;
 }
 
 /**
  * This import is brought into the actual document.
  */
-@import "processImport-import.css";
+@import "special-comment.css";

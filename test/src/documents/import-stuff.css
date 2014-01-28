@@ -1,0 +1,15 @@
+---
+cleancss: true
+---
+
+/**
+ * Standard CSS to see where the document is.
+ */
+h2 {
+	color: yellow;
+}
+
+/**
+ * This import is brought into the actual document.
+ */
+@import "special-comment.css";

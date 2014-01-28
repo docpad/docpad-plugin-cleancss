@@ -1,0 +1,10 @@
+/*!
+ * this won't be removed because it is a special comment
+ */
+
+/**
+ * make something blue - this comment will be removed
+ */
+h3 {
+	color: blue;
+}
