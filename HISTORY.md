@@ -1,5 +1,8 @@
 # History
 
+- v2.0.2 January 28, 2014
+	- Only set `referencesOthers` for files that actually import other files
+
 - v2.0.1 January 28, 2014
 	- Relative and root URLs
 

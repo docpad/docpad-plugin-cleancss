@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-cleancss",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Adds support to clean CSS in DocPad.",
   "homepage": "http://github.com/docpad/docpad-plugin-cleancss",
   "license": {
@@ -23,7 +23,11 @@
   ],
   "author": "2013+ Rob Loach <robloach@gmail.com> (http://github.com/RobLoach)",
   "maintainers": [
+    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)",
     "Rob Loach <robloach@gmail.com> (http://github.com/RobLoach)"
+  ],
+  "contributors": [
+    "Rob Loach <robloach@gmail.com> (https://github.com/RobLoach)"
   ],
   "bugs": {
     "url": "http://github.com/docpad/docpad-plugin-cleancss/issues"
@@ -54,8 +58,5 @@
   },
   "directories": {
     "lib": "./out"
-  },
-  "contributors": [
-    "Rob Loach <robloach@gmail.com> (http://github.com/RobLoach)"
-  ]
+  }
 }

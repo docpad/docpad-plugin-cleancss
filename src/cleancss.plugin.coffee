@@ -43,23 +43,25 @@ module.exports = (BasePlugin) ->
 
 				tasks.addTask (complete) ->
 					# Extract opts
+					content = file.get('contentRendered')
 					cleanOpts = file.get('cleancss')
 					cleanOpts = {}  if cleanOpts is true
 					cleanOpts.relativeTo = file.get('outDirPath')
 					cleanOpts.root = docpadConfig.outPath
 
-					# Provide the default configuration options if needed.
+					# Update references other
+					if cleanOpts.processImport and content.indexOf('@import') isnt -1
+						file.setMetaDefaults('referencesOthers': true)
+
+					# Extend the file's opts with our default plugin opts
 					for own key, value of config.cleancssOpts
 						cleanOpts[key] ?= value
 
+					# Perform the render
 					try
-						output = new CleanCSS(cleanOpts).minify(file.get('contentRendered'))
+						output = new CleanCSS(cleanOpts).minify(content)
 					catch err
 						return complete(err)
-
-					# Update references other
-					if cleanOpts.processImport
-						file.setMetaDefaults('referencesOthers': true)
 
 					# Update the out content for the document
 					file.set({
