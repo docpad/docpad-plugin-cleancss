@@ -27,7 +27,8 @@
     "Rob Loach <robloach@gmail.com> (http://github.com/RobLoach)"
   ],
   "contributors": [
-    "Rob Loach <robloach@gmail.com> (https://github.com/RobLoach)"
+    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)",
+    "Rob Loach <robloach@gmail.com> (http://github.com/RobLoach)"
   ],
   "bugs": {
     "url": "http://github.com/docpad/docpad-plugin-cleancss/issues"
