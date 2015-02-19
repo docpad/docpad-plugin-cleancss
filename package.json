@@ -53,7 +53,7 @@
     "coffee-script": "^1.9.0",
     "joe": "^1.6.0",
     "docpad": "6",
-    "projectz": "^0.4.2"
+    "projectz": "^0.4.3"
   },
   "main": "./out/cleancss.plugin.js",
   "scripts": {
