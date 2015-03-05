@@ -31,9 +31,9 @@ docpad install cleancss
 Create a CSS file with the *cleancss* option:
 
 ``` css
----
+/***
 cleancss: true
----
+***/
 
 body {
 	background-color: black;
