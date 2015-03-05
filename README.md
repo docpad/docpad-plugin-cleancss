@@ -35,11 +35,11 @@ Create a CSS file with the *cleancss* option:
 cleancss: true
 ***/
 
+@import 'example.css';
+
 body {
 	background-color: black;
 }
-
-@import 'example.css';
 ```
 
 
