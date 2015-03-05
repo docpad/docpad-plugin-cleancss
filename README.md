@@ -48,7 +48,7 @@ body {
 ### Defaults
 
 The default configuration for this plugin is the equivalant of adding the
-following [clean-css options](https://github.com/GoalSmashers/clean-css#how-to-use-clean-css-programmatically)
+following [clean-css options](https://github.com/jakubpawlowicz/clean-css#how-to-use-clean-css-programmatically)
 to your [DocPad configuration file](http://docpad.org/docs/config):
 
 ``` coffee
@@ -56,11 +56,10 @@ plugins:
 	cleancss:
 		# These are options passed to the clean-css dependency
 		cleancssOpts:
-			# * for keeping all (default), 1 for keeping first one only, 0 for
-			# removing all
+			# * for keeping all (default), 1 for keeping first one only, 0 for removing all
 			keepSpecialComments: '*'
 
-			# Whether to keep line breaks (default is false).
+			# Whether to keep line breaks
 			keepBreaks: false
 
 			# Turns on benchmarking mode measuring time spent on cleaning up.
@@ -69,13 +68,13 @@ plugins:
 			# Whether to process @import rules.
 			processImport: true
 
-			# Whether to skip URLs rebasing.
-			noRebase: false
+			# Set to false to skip URL rebasing
+			rebase: true
 
-			# set to true to disable advanced optimizations.
-			noAdvanced: false
+			# Set to false to disable advanced optimizations
+			advanced: false
 
-			# Enables debug mode.
+			# Set to true to get minification statistics under stats property
 			debug: false
 
 		# Disabled on development environments by default.
