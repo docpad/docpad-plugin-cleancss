@@ -1,13 +1,6 @@
----
+/***
 cleancss: true
----
-
-/**
- * Standard CSS to see where the document is.
- */
-h2 {
-	color: yellow;
-}
+***/
 
 /**
  * This import is brought into the actual document.
@@ -18,3 +11,10 @@ h2 {
  * MAke sure urls are fixed up when imported
  */
 @import "./subfolder/url.css";
+
+/**
+ * Standard CSS to see where the document is.
+ */
+h2 {
+	color: yellow;
+}

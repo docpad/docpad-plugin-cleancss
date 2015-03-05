@@ -12,8 +12,8 @@ module.exports = (BasePlugin) ->
 				keepBreaks: false
 				benchmark: false
 				processImport: true
-				noRebase: false
-				noAdvanced: true
+				rebase: true
+				advanced: false
 				debug: false
 
 			# Disabled on development environments by default.
@@ -34,7 +34,7 @@ module.exports = (BasePlugin) ->
 			docpadConfig = docpad.getConfig()
 
 			# Create the task group to handle multiple Browserify files.
-			tasks = new TaskGroup({concurrency:0, next})
+			tasks = new TaskGroup(concurrency:0).done(next)
 
 			# Create a new task for each Browserify files.
 			opts.collection.findAll({cleancss: $exists: true}).each (file) ->
@@ -44,6 +44,7 @@ module.exports = (BasePlugin) ->
 				tasks.addTask (complete) ->
 					# Extract opts
 					content = file.get('contentRendered')
+					filePath = file.getPath()
 					cleanOpts = file.get('cleancss')
 					cleanOpts = {}  if cleanOpts is true
 					cleanOpts.relativeTo = file.get('outDirPath')
@@ -58,19 +59,31 @@ module.exports = (BasePlugin) ->
 						cleanOpts[key] ?= value
 
 					# Perform the render
-					try
-						output = new CleanCSS(cleanOpts).minify(content)
-					catch err
-						return complete(err)
+					new CleanCSS(cleanOpts).minify content, (errors, result) ->
+						# Check for errors
+						if result.errors?.length
+							err = new Error(
+								"The following errors occured cleaning the css file: #{filePath}\n"+
+								(error.stack  for error in result.errors).join('\n\n')
+							)
+							return complete(err)
 
-					# Update the out content for the document
-					file.set({
-						contentRendered: output
-						contentRenderedWithoutLayouts: output
-					})
+						# Check for warnings
+						if result.warnings?.length
+							warn = new Error(
+								"The following warnings occured cleaning the css file: #{filePath}\n"+
+								result.warnings.join('\n\n')
+							)
+							docpad.warn(warn)
 
-					# Update the out content for the file
-					file.action('write', complete)
+						# Update the out content for the document
+						file.set({
+							contentRendered: result.styles
+							contentRenderedWithoutLayouts: result.styles
+						})
+
+						# Update the out content for the file
+						file.action('write', complete)
 
 
 			# Execute all of the created tasks.
