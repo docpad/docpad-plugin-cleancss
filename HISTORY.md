@@ -1,5 +1,10 @@
 # History
 
+## v2.3.0 2018 February 16
+- Now compiled with CoffeeScript v2
+- Updated dependencies, although `clean-css` remains at v3
+- Updated base files
+
 ## v2.2.0 2017 April 18
 - Updated base files
 

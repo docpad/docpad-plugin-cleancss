@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-cleancss",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Adds support to clean CSS in DocPad.",
   "homepage": "https://github.com/docpad/docpad-plugin-cleancss",
   "license": "MIT",
