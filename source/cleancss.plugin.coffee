@@ -34,7 +34,7 @@ module.exports = (BasePlugin) ->
 			docpadConfig = docpad.getConfig()
 
 			# Create the task group to handle multiple Browserify files.
-			tasks = new TaskGroup(concurrency:0).done(next)
+			tasks = TaskGroup.create(concurrency:0).done(next)
 
 			# Create a new task for each Browserify files.
 			opts.collection.findAll({cleancss: $exists: true}).each (file) ->
@@ -59,12 +59,20 @@ module.exports = (BasePlugin) ->
 						cleanOpts[key] ?= value
 
 					# Perform the render
-					new CleanCSS(cleanOpts).minify content, (errors, result) ->
+					new CleanCSS(cleanOpts).minify content, (error, result) ->
+						# Check for error
+						if error
+							err = new Error(
+								"The following error occured cleaning the css file: #{filePath}\n"+
+								(error.stack or error)
+							)
+							return complete(err)
+
 						# Check for errors
 						if result.errors?.length
 							err = new Error(
 								"The following errors occured cleaning the css file: #{filePath}\n"+
-								(error.stack  for error in result.errors).join('\n\n')
+								((error.stack or error)  for error in result.errors).join('\n\n')
 							)
 							return complete(err)
 
