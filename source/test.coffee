@@ -1,10 +1,8 @@
 # Test our plugin using DocPad's Testers
-require('docpad').require('testers')
+require('docpad-plugintester')
 	.test(
 		{
-			pluginPath: require('path').join(__dirname, '..')
 			outExpectedPath: __dirname+'/../test/out-expected-development'
-			testerClass: 'RendererTester'
 		}
 		{
 			env: 'development'
@@ -12,10 +10,7 @@ require('docpad').require('testers')
 	)
 	.test(
 		{
-			name: ''
-			pluginPath: require('path').join(__dirname, '..')
 			outExpectedPath: __dirname+'/../test/out-expected-production'
-			testerClass: 'RendererTester'
 		}
 		{
 			env: 'production'
