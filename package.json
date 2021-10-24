@@ -92,7 +92,7 @@
   "type": "commonjs",
   "main": "edition-esnext/index.js",
   "dependencies": {
-    "clean-css": "^4.2.3",
+    "clean-css": "^5.2.2",
     "docpad-baseplugin": "^1.4.0",
     "taskgroup": "^7.16.0"
   },
